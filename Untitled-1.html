@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Movimentação Simples com jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #meuElemento {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative; /* Necessário para movimentação */
+        }
+    </style>
+</head>
+<body>
+    <button id="mover">Mover</button>
+    <div id="meuElemento"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#mover').click(function() {
+                $('#meuElemento').animate({
+                    left: '+=200px' // Move 200 pixels para a direita
+                }, 1000); // Duração da animação em milissegundos
+            });
+        });
+    </script>
+</body>
+</html>
